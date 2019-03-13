@@ -1,0 +1,15 @@
+/* pages/my/index.wxss */
+.userinfo{
+  min-height: 100vh;
+  background-color: #fff;
+}
+.userinfo-avatar{
+  width:200rpx;
+  height:200rpx;
+  margin-left:37%;
+  margin-top:50rpx;
+
+}
+.userinfo-nickname{
+  text-align: center
+}

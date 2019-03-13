@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+
+
+<view>
+  <view class="swiper-container">
+        <swiper class="swiper_box" 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"        indicator-dots="{{indicatorDots}}"               >
+            <block wx:for="{{imgUrls}}" wx:key="id">
+                <swiper-item>
+                    <image bindtap="tapBanner" src="{{item}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+   </view>
+
+   <view class="type-container">
+   <scroll-view scroll-x="true"class="type-navbar">
+      <view wx:for="{{types}}" wx:key="id"id="{{index}}"class="type-item {{currentTypeId == index ?         'activity-type-on':''}}" bindtap="tabClick">
+      <view >{{item}}</view>
+      </view>
+   </scroll-view>
+   </view>
+
+
+   <view class="goods-container">
+
+    <view class="goods-wrapper"wx:for="{{filtergoods}}"bindtap='navtoDetail'data-id="{{index}}">
+      <view class="goods-img"><image src="{{item.img}}"mode="widthFix"lazy-load="true"></image></view>
+      <view class="goods-sale-num">{{item.sale}}人已买</view>
+      <view class="goods-title">{{item.title}}</view>
+      <view class="goods-price">￥{{item.price}}</view>
+    </view>
+   </view>
+</view>
+</view>

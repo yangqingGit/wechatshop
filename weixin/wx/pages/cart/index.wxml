@@ -1,0 +1,48 @@
+<!--pages/cart/index.wxml-->
+<view class="container">
+<view class='cart-page'>
+
+ <view class="top">
+ <view class='select-all'>
+  <image src="../images/select-on.png"bindtap="allselect"class="{{selectall == true ? 'show' : 'hide'}}"></image>
+
+  <image src="../images/select-off.png"bindtap="allselect"class="{{selectall == false ? 'show' : 'hide'}}"></image>
+ </view>
+ <text class='shop-name'>可爱狗自营</text>
+ </view>
+
+<view class='cart-list'wx:for="{{list}}">
+   <view class='cart-good-select'>
+   <image src='../images/select-off.png'mode="widthFix" v-lazy-load='true' 
+   class="{{item.isselect== 0 ?'show' :'hide'}}"bindtap="select" data-id="{{index}}"></image>
+    <image src='../images/select-on.png'mode="widthFix" v-lazy-load='true' bindtap="select" data-id="{{index}}" 
+    class="{{item.isselect == 1 ? 'show' : 'hide'}}"></image>
+   </view>
+   <view class='cart-good-pic'><image src='{{item.img}}' mode="widthFix"></image></view>
+   <view class='cart-good-info'>
+   <image class='cart-good-del'bindtap='delectItem'data-id="{{index}}"src="../images/del.png"></image>
+   <view class='cart-good-title'>{{item.title}}</view>
+   <view class='cart-good-size'>{{item.size}}</view>
+   <view class='cart-good-price'>￥{{item.price}}</view>
+   <view class='cart-good-num'>{{item.nums}}</view>
+   <view class='cart-plus-btn'><image src='../images/plus.png'bindtap="plus"data-id="{{index}}"></image></view>
+   <view class='cart-add-btn'><image src='../images/add.png'bindtap="add"data-id="{{index}}"></image></view>
+   </view>
+</view>
+  
+  <view class='cart-control'>
+    <view class='allselect'>
+    <image src='../images/select-off.png'mode="widthFix" v-lazy-load='true' 
+   class="{{selectall== false ?'show' :'hide'}}"bindtap="allselect" data-id="{{index}}"></image>
+    <image src='../images/select-on.png'mode="widthFix" v-lazy-load='true' bindtap="allselect" data-id="{{index}}" 
+    class="{{selectall == true ? 'show' : 'hide'}}"></image>
+   </view>
+
+   <view class='allselect-btn'>全选</view>
+
+    <view class="total-price">总计:{{totalPrice}}</view>
+     
+    <view class='buy-good'>结算</view>
+  </view>
+</view>
+</view>

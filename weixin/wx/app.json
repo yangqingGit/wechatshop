@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/index",
+    "pages/cart/index",
+    "pages/goodsDetail/index",
+    "pages/authorize/index"
+        
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "DOG",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "color": "#000000",
+      "iconPath": "pages/images/home-off.png",
+      "selectedIconPath": "pages/images/home-on.png"
+    },
+    {
+      "pagePath": "pages/cart/index",
+      "text": "购物车",
+      "color": "#000000",
+      "iconPath": "pages/images/cart-off.png",
+      "selectedIconPath": "pages/images/cart-on.png"
+    },
+    {
+      "pagePath": "pages/my/index",
+      "text": "我的",
+      "color": "#000000",
+      "iconPath": "pages/images/my-off.png",
+      "selectedIconPath": "pages/images/my-on.png"
+    }
+    ]
+  }
+}

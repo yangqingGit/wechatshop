@@ -1,0 +1,71 @@
+/* pages/goodsDetail/index.wxss */
+
+.swiper_box{
+  width: 100%;
+  height: 400rpx;
+}
+.swiper_box image{
+  width: 100%;
+
+}
+
+.goods-title{
+  margin-top: 20rpx;
+  padding:20rpx 10rpx ;
+  font-weight: bold;
+  background-color: #fff;
+}
+.goods-size{
+  margin-top: 20rpx;
+  padding:20rpx 10rpx ;
+  background-color: #fff;
+  font-size: 30rpx;
+}
+.goods-info{
+  margin-top: 20rpx;
+  padding:20rpx 10rpx ;
+  background-color: #fff;
+  font-size: 30rpx;
+}
+.bottom-control{
+  position: absolute;
+  width: 100%;
+  height: 80rpx;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+  border-top:solid 1px rgb(219, 213, 213);
+}
+.join-cart{
+  width: 40%;
+  float:right;
+  background-color: rgb(228, 131, 131);
+  text-align: center;
+  color:#fff;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.go-buy{
+  width: 40%;
+  float:right;
+  background-color: red;
+  text-align: center;
+  color:#fff;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.like-btn image{
+ width:40rpx;
+height:40rpx;
+float:left;
+margin-left:52rpx;
+margin-top:6rpx;
+
+}
+.like-text{
+position:absolute;
+left:23px;
+top:44rpx;
+font-size:24rpx;
+
+}
